@@ -48,30 +48,35 @@ h1 {
 	display: block;
 	list-style: none;
 	animation: animate 20s linear infinite;
-	bottom: -150px;
+	bottom: 100vh;
 }
 
 .names li:nth-child(1) {
+  font-size: 25px;
 	left: 86%;
 }
 
 .names li:nth-child(2) {
+  font-size: 35px;
 	left: 12%;
 	animation-delay: 1.5s;
 	animation-duration: 10s;
 }
 
 .names li:nth-child(3) {
+  font-size: 8px;
 	left: 70%;
 	animation-delay: 5.5s;
 }
 
 .names li:nth-child(4) {
+  font-size: 50px;
 	left: 42%;
 	animation-duration: 15s;
 }
 
 .names li:nth-child(5) {
+  font-size: 15px;
 	left: 65%;
 }
 
@@ -82,11 +87,9 @@ h1 {
 
 @keyframes animate {
 	0% {
-		transform: translateY(0) rotate(0deg);
-		opacity: 1;
+		transform: translateY(100vh) rotate(0deg);
 	}
 	100% {
-		transform: translateY(-1200px) rotate(0deg);
-		opacity: 0;
+		transform: translateY(0) rotate(0deg);
 	}
 }
