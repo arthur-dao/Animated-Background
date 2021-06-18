@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 :root {
     --lightGray: #edf0f1;
     --charcoal: #24252a;
+    --lighterCharcoal: #2B2D32;
 }
 
 * {
@@ -19,15 +21,27 @@ body {
 h1 {
   position: absolute;
   width: 100%;
-  z-index: 1;
+  text-shadow: 5px 5px black;
+  z-index: 2;
   text-align: center;
-  font-size: 50px;
+  font-size: 50px !important;
   margin-top: 20%;
 }
 
 .animationArea {
 	width: 100%;
 	height: 100vh;
+}
+
+.box {
+  position: relative;
+  width: 80%;
+  height: 80vh;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  background-color: var(--lighterCharcoal);
 }
 
 .names, .shapes {
@@ -37,13 +51,17 @@ h1 {
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
+  z-index: 0;
 }
 .names li {
+  font-family: 'Permanent Marker', cursive;
 	position: absolute;
 	display: block;
 	list-style: none;
 	animation: name 20s linear infinite;
+  color: rgba(255, 255, 255, 0.2);
 	bottom: 100vh;
+  font-size: 35px;
 }
 
 .shapes li {
@@ -57,37 +75,30 @@ h1 {
 }
 
 .names li:nth-child(1) {
-  font-size: 25px;
-	left: 86%;
+	left: 0%;
 }
 
 .names li:nth-child(2) {
-  font-size: 35px;
-	left: 12%;
-	animation-delay: 1.5s;
-	animation-duration: 10s;
+	left: 20%;
 }
 
 .names li:nth-child(3) {
-  font-size: 8px;
-	left: 70%;
-	animation-delay: 5.5s;
+	left: 40%;
+  box-shadow: 120px    0px 0  15px #f00,
+				      -60px  104px 0   0px #0f0,
+		          -60px -104px 0 -15px #00f;
 }
 
 .names li:nth-child(4) {
-  font-size: 50px;
-	left: 42%;
-	animation-duration: 15s;
+	left: 60%;
 }
 
 .names li:nth-child(5) {
-  font-size: 15px;
-	left: 65%;
+	left: 80%;
 }
 
 .names li:nth-child(6) {
-	left: 15%;
-	animation-delay: 3.5s;
+	left: 98%;
 }
 
 .shapes li:nth-child(1) {
@@ -101,14 +112,15 @@ h1 {
   left: 25%;
 	width: 40px;
 	height: 40px;
+  animation-delay: 5s;
 }
 
 @keyframes name {
-	0% {
-		transform: translateY(100vh);
-	}
-	100% {
+	from {
 		transform: translateY(0);
+	}
+	to {
+		transform: translateY(100vh);
 	}
 }
 
