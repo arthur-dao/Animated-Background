@@ -2,12 +2,7 @@
 
 :root {
     --lightGray: #edf0f1;
-    --mediumGray: #b6b6b6;
-    --darkGray: #585858;
     --charcoal: #24252a;
-    --lighterCharcoal: #2B2D32;
-    --beige: #cbcbba;
-    --green :#599669;
 }
 
 * {
@@ -35,7 +30,7 @@ h1 {
 	height: 100vh;
 }
 
-.names {
+.names, .shapes {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -47,8 +42,18 @@ h1 {
 	position: absolute;
 	display: block;
 	list-style: none;
-	animation: animate 20s linear infinite;
+	animation: name 20s linear infinite;
 	bottom: 100vh;
+}
+
+.shapes li {
+  position: absolute;
+	display: block;
+	list-style: none;
+	animation: shape 20s linear infinite;
+	bottom: 100vh;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
 }
 
 .names li:nth-child(1) {
@@ -85,11 +90,33 @@ h1 {
 	animation-delay: 3.5s;
 }
 
-@keyframes animate {
+.shapes li:nth-child(1) {
+  left: 75%;
+  width: 100px;
+	height: 100px;
+  animation-delay: 2.5s;
+}
+
+.shapes li:nth-child(2) {
+  left: 25%;
+	width: 40px;
+	height: 40px;
+}
+
+@keyframes name {
+	0% {
+		transform: translateY(100vh);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes shape {
 	0% {
 		transform: translateY(100vh) rotate(0deg);
 	}
 	100% {
-		transform: translateY(0) rotate(0deg);
+		transform: translateY(0) rotate(360deg);
 	}
 }
