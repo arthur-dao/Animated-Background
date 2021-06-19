@@ -41,7 +41,7 @@ h1 {
   top: 50%;
   transform: translateY(-50%);
   z-index: 1;
-  background-color: var(--lighterCharcoal);
+  background-color: rgb(43, 45, 50, 0.4);
 }
 
 .names, .shapes {
@@ -53,6 +53,11 @@ h1 {
 	overflow: hidden;
   z-index: 0;
 }
+
+.names {
+  transform: rotate(-5deg);
+}
+
 .names li {
   font-family: 'Permanent Marker', cursive;
 	position: absolute;
@@ -61,7 +66,7 @@ h1 {
 	animation: name 20s linear infinite;
   color: rgba(255, 255, 255, 0.2);
 	bottom: 100vh;
-  font-size: 35px;
+  font-size: calc(3vw + 3px);
 }
 
 .shapes li {
@@ -84,9 +89,6 @@ h1 {
 
 .names li:nth-child(3) {
 	left: 40%;
-  box-shadow: 120px    0px 0  15px #f00,
-				      -60px  104px 0   0px #0f0,
-		          -60px -104px 0 -15px #00f;
 }
 
 .names li:nth-child(4) {
@@ -98,7 +100,33 @@ h1 {
 }
 
 .names li:nth-child(6) {
-	left: 98%;
+	left: -10%;
+  animation-delay: 2.5s;
+}
+
+.names li:nth-child(7) {
+	left: 10%;
+  animation-delay: 2.5s;
+}
+
+.names li:nth-child(8) {
+	left: 30%;
+  animation-delay: 2.5s;
+}
+
+.names li:nth-child(9) {
+	left: 50%;
+  animation-delay: 2.5s;
+}
+
+.names li:nth-child(10) {
+	left: 70%;
+  animation-delay: 2.5s;
+}
+
+.names li:nth-child(11) {
+	left: 90%;
+  animation-delay: 2.5s;
 }
 
 .shapes li:nth-child(1) {
@@ -120,7 +148,7 @@ h1 {
 		transform: translateY(0);
 	}
 	to {
-		transform: translateY(100vh);
+		transform: translateY(110vh);
 	}
 }
 
